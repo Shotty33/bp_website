@@ -14,12 +14,15 @@ const Navigation = ({ activeSection, scrolled, scrollToSection }) => {
     <nav className={`fixed w-full z-40 transition-all duration-300 ${scrolled ? 'bg-black/95 backdrop-blur-sm shadow-lg' : 'bg-transparent'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <div className="flex items-center space-x-3">
+          <button
+            onClick={() => scrollToSection('home')}
+            className="flex items-center space-x-3 cursor-pointer hover:opacity-80 transition-opacity"
+          >
             <div className="w-10 h-10 bg-emerald-800 rounded-lg flex items-center justify-center font-bold text-cream">
               {CONFIG.company.logo}
             </div>
             <span className="font-bold text-xl text-cream">{CONFIG.company.name}</span>
-          </div>
+          </button>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
