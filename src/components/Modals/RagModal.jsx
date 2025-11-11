@@ -11,14 +11,14 @@ const RagModal = ({ isOpen, onClose }) => {
       onClick={onClose}
     >
       <div
-        className="bg-gray-900 rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto border-2 border-emerald-700"
+        className="bg-gray-900 rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto border-2 border-hunter-green-700"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="p-8">
           <div className="flex justify-between items-start mb-6">
             <div>
               <h2 className="text-3xl font-bold text-cream mb-2">{CONFIG.rag.title}</h2>
-              <p className="text-xl text-emerald-400">{CONFIG.rag.subtitle}</p>
+              <p className="text-xl text-hunter-green-400">{CONFIG.rag.subtitle}</p>
             </div>
             <button
               onClick={onClose}
@@ -32,27 +32,27 @@ const RagModal = ({ isOpen, onClose }) => {
           <div className="mb-8 bg-black p-6 rounded-lg border border-gray-800">
             <div className="flex flex-col md:flex-row items-center justify-center gap-6">
               <div className="text-center">
-                <div className="w-28 h-28 bg-emerald-800 rounded-lg flex items-center justify-center mb-3 mx-auto">
+                <div className="w-28 h-28 bg-hunter-green-800 rounded-lg flex items-center justify-center mb-3 mx-auto">
                   <Database className="w-14 h-14 text-cream" />
                 </div>
                 <p className="font-semibold text-cream">Your Data</p>
                 <p className="text-sm text-gray-400">Documents, databases, files</p>
               </div>
 
-              <div className="hidden md:block text-3xl text-emerald-500">→</div>
+              <div className="hidden md:block text-3xl text-hunter-green-500">→</div>
 
               <div className="text-center">
-                <div className="w-28 h-28 bg-emerald-800 rounded-lg flex items-center justify-center mb-3 mx-auto">
+                <div className="w-28 h-28 bg-hunter-green-800 rounded-lg flex items-center justify-center mb-3 mx-auto">
                   <Brain className="w-14 h-14 text-cream" />
                 </div>
                 <p className="font-semibold text-cream">RAG System</p>
                 <p className="text-sm text-gray-400">Retrieval + AI Model</p>
               </div>
 
-              <div className="hidden md:block text-3xl text-emerald-500">→</div>
+              <div className="hidden md:block text-3xl text-hunter-green-500">→</div>
 
               <div className="text-center">
-                <div className="w-28 h-28 bg-emerald-800 rounded-lg flex items-center justify-center mb-3 mx-auto">
+                <div className="w-28 h-28 bg-hunter-green-800 rounded-lg flex items-center justify-center mb-3 mx-auto">
                   <Sparkles className="w-14 h-14 text-cream" />
                 </div>
                 <p className="font-semibold text-cream">Smart Answers</p>
@@ -68,7 +68,7 @@ const RagModal = ({ isOpen, onClose }) => {
                 key={index}
                 className="bg-black p-5 rounded-lg border border-gray-800"
               >
-                <h3 className="text-lg font-semibold mb-2 text-emerald-400">{benefit.title}</h3>
+                <h3 className="text-lg font-semibold mb-2 text-hunter-green-400">{benefit.title}</h3>
                 <p className="text-gray-400 text-sm">{benefit.description}</p>
               </div>
             ))}

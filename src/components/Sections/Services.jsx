@@ -30,10 +30,10 @@ const Services = ({ onRagModalOpen }) => {
           {CONFIG.services.list.map((service, index) => (
             <div
               key={index}
-              className="bg-gray-900 p-8 rounded-xl transition-all duration-300 hover:shadow-2xl hover:shadow-emerald-500/30 cursor-pointer border border-gray-800 hover:border-emerald-600 group"
+              className="bg-gray-900 p-8 rounded-xl transition-all duration-300 hover:shadow-2xl hover:shadow-hunter-green-500/30 cursor-pointer border border-gray-800 hover:border-hunter-green-600 group"
               onClick={() => setExpandedService(expandedService === index ? null : index)}
             >
-              <div className="text-emerald-400 mb-4 group-hover:text-emerald-300 transition-colors">
+              <div className="text-hunter-green-400 mb-4 group-hover:text-hunter-green-300 transition-colors">
                 {getIcon(service.iconName)}
               </div>
               <h3 className="text-2xl font-semibold mb-3 text-cream">{service.title}</h3>
@@ -44,7 +44,7 @@ const Services = ({ onRagModalOpen }) => {
                   <ul className="space-y-2">
                     {service.details.map((detail, idx) => (
                       <li key={idx} className="text-gray-400 text-sm flex items-start">
-                        <span className="text-emerald-400 mr-2">•</span>
+                        <span className="text-hunter-green-400 mr-2">•</span>
                         <span>{detail}</span>
                       </li>
                     ))}
@@ -55,7 +55,7 @@ const Services = ({ onRagModalOpen }) => {
                         e.stopPropagation();
                         onRagModalOpen();
                       }}
-                      className="mt-4 text-emerald-400 hover:text-emerald-300 text-sm font-semibold flex items-center space-x-1 transition-colors"
+                      className="mt-4 text-hunter-green-400 hover:text-hunter-green-300 text-sm font-semibold flex items-center space-x-1 transition-colors"
                     >
                       <span>Learn more about RAG</span>
                       <ArrowRight className="w-4 h-4" />
@@ -64,7 +64,7 @@ const Services = ({ onRagModalOpen }) => {
                 </div>
               )}
 
-              <button className="mt-4 text-emerald-400 hover:text-emerald-300 text-sm font-semibold transition-colors">
+              <button className="mt-4 text-hunter-green-400 hover:text-hunter-green-300 text-sm font-semibold transition-colors">
                 {expandedService === index ? 'Show less' : 'Learn more'}
               </button>
             </div>

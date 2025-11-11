@@ -18,7 +18,7 @@ const Navigation = ({ activeSection, scrolled, scrollToSection }) => {
             onClick={() => scrollToSection('home')}
             className="flex items-center space-x-3 cursor-pointer hover:opacity-80 transition-opacity"
           >
-            <div className="w-10 h-10 bg-emerald-800 rounded-lg flex items-center justify-center font-bold text-cream">
+            <div className="w-10 h-10 bg-hunter-green-800 rounded-lg flex items-center justify-center font-bold text-cream">
               {CONFIG.company.logo}
             </div>
             <span className="font-bold text-xl text-cream">{CONFIG.company.name}</span>
@@ -32,8 +32,8 @@ const Navigation = ({ activeSection, scrolled, scrollToSection }) => {
                 onClick={() => handleNavClick(section)}
                 className={`capitalize transition-colors duration-200 ${
                   activeSection === section
-                    ? 'text-emerald-400'
-                    : 'text-gray-300 hover:text-emerald-300'
+                    ? 'text-hunter-green-400'
+                    : 'text-gray-300 hover:text-hunter-green-300'
                 }`}
               >
                 {section}
@@ -58,7 +58,7 @@ const Navigation = ({ activeSection, scrolled, scrollToSection }) => {
             <button
               key={section}
               onClick={() => handleNavClick(section)}
-              className="block w-full text-left px-4 py-3 capitalize text-gray-300 hover:bg-gray-800 hover:text-emerald-300 transition-colors"
+              className="block w-full text-left px-4 py-3 capitalize text-gray-300 hover:bg-gray-800 hover:text-hunter-green-300 transition-colors"
             >
               {section}
             </button>
