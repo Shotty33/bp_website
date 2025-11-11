@@ -1,9 +1,22 @@
 import React, { useState } from 'react';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Code, Brain, TrendingUp, Database } from 'lucide-react';
 import CONFIG from '../../config/siteConfig';
 
 const Services = ({ onRagModalOpen }) => {
   const [expandedService, setExpandedService] = useState(null);
+
+  // Icon mapping
+  const iconMap = {
+    Code: Code,
+    Brain: Brain,
+    TrendingUp: TrendingUp,
+    Database: Database,
+  };
+
+  const getIcon = (iconName) => {
+    const IconComponent = iconMap[iconName];
+    return IconComponent ? <IconComponent className="w-8 h-8" /> : null;
+  };
 
   return (
     <section id="services" className="py-20 px-4 sm:px-6 lg:px-8">
@@ -21,7 +34,7 @@ const Services = ({ onRagModalOpen }) => {
               onClick={() => setExpandedService(expandedService === index ? null : index)}
             >
               <div className="text-emerald-400 mb-4 group-hover:text-emerald-300 transition-colors">
-                {service.icon}
+                {getIcon(service.iconName)}
               </div>
               <h3 className="text-2xl font-semibold mb-3 text-cream">{service.title}</h3>
               <p className="text-gray-400 mb-4">{service.description}</p>

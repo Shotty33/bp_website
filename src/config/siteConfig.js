@@ -1,6 +1,3 @@
-import React from 'react';
-import { Code, Brain, TrendingUp, Database } from 'lucide-react';
-
 // Configuration file for easy content management
 const CONFIG = {
   company: {
@@ -51,7 +48,7 @@ const CONFIG = {
           "Integration with existing systems and databases",
           "Ongoing maintenance and feature enhancements"
         ],
-        icon: <Code className="w-8 h-8" />
+        iconName: "Code"
       },
       {
         title: "AI Integration & RAG Architecture",
@@ -62,7 +59,7 @@ const CONFIG = {
           "Privacy-first AI that keeps your sensitive data under your control",
           "Cost-effective solutions that avoid expensive model training"
         ],
-        icon: <Brain className="w-8 h-8" />
+        iconName: "Brain"
       },
       {
         title: "Intelligent Automation",
@@ -73,7 +70,7 @@ const CONFIG = {
           "API integrations connecting your tools and services",
           "Custom scripts and tools tailored to your processes"
         ],
-        icon: <TrendingUp className="w-8 h-8" />
+        iconName: "TrendingUp"
       },
       {
         title: "Technical Strategy & Consulting",
@@ -84,7 +81,7 @@ const CONFIG = {
           "Code reviews and best practices implementation",
           "Team training and knowledge transfer"
         ],
-        icon: <Database className="w-8 h-8" />
+        iconName: "Database"
       }
     ]
   },
